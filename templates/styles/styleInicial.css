@@ -15,6 +15,7 @@ a:visited{
 }
 body{
     background-color: rgb(237, 238, 255);
+    user-select:none;
 }
 figcaption{
     font-size: 1.12em;
