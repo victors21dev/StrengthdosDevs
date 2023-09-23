@@ -8,7 +8,6 @@ let persons = [
     format("Adrian", "../team/the-programmer.png", "", "", ""),
 ]
 persons.forEach(element => {
-    console.log(element)
     team_div.innerHTML += `
         <div class="square">
             <div class="circle_img" style="background-image:URL(${element.url}); background-size: cover; background-position: center center">
