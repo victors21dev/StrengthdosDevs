@@ -1,7 +1,11 @@
 let team_div = document.querySelector("#team_div")
 let persons = [
     format("Victor Santos", "../team/victor.jpeg", "santosvictor18", "victor-santos-da-silva-2753a6191", "victors21dev"),
-    format("Mirella Louise", "../team/mirella.jpg", "miih__3", "", "")
+    format("Mirella Louise", "../team/mirella.jpg", "miih__3", "", ""),
+    format("Paulo Vinicio", "../team/the-programmer.png", "", "", ""),
+    format("Caio Porto", "../team/the-programmer.png", "", "", ""),
+    format("Charlesson Bezerra", "../team/the-programmer.png", "", "", ""),
+    format("Adrian", "../team/the-programmer.png", "", "", ""),
 ]
 persons.forEach(element => {
     console.log(element)

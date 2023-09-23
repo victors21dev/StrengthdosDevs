@@ -32,7 +32,7 @@ main{
     display: flex;
     gap:8px;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     margin: 26px;
 }
 .apre_grid{
