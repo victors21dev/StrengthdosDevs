@@ -1,0 +1,129 @@
+@media screen and (max-width: 1980px){
+    figcaption{
+        font-size: 1.2em;
+    }
+    .button_iniciar_game button{
+        margin: 26px;
+        padding: 18px 30px;
+        font-size: 1.6em;
+    }
+    .container_eq{
+        max-width: calc(1190px - 26px);
+    }
+    .description h4{
+        font-size: 2em;
+        padding: 4px 0px;
+    }
+    .description p{
+        font-size: 1.2em;
+        padding: 8px 0px;
+    }
+    .div_button_arrow{
+        max-width: calc(1190px - 8px);
+    }
+    .fundo_background{
+        font-size: 2.4em;
+        gap: 26px;
+    }
+    .img_size{
+        width: 420px;
+    }
+    .section_initial{
+        grid-template-rows: 240px auto 80px;
+    }
+}
+@media screen and (max-width: 1400px){
+    figcaption{
+        font-size: 1em;
+    }
+    .apre_grid{
+        flex-wrap: nowrap;
+        padding: 4px;
+    }
+    .button_arrow{
+        max-width: calc(1065px - 8px);
+    }
+    .button_iniciar_game button{
+        margin: 18px;
+        padding: 10px 16px;
+        font-size: 1.6em;
+    }
+    .container_eq{
+        max-width: calc(1010px - 26px);
+    }
+    .description h4{
+        font-size: 1.6em;
+        padding: 4px 0px;
+    }
+    .description p{
+        font-size: 1em;
+        padding: 8px 0px;
+    }
+    .div_button_arrow{
+        max-width: calc(1010px - 8px);
+    }
+    .fundo_background{
+        font-size: 1.8em;
+        gap: 18px;
+    }
+    .img_size{
+        width: 340px;
+    }
+    .section_initial{
+        grid-template-rows: 180px auto 80px;
+    }
+}
+@media screen and (max-width:800px){
+    :root{
+        --width_square_img: 200px;
+    }
+    .apre_grid{
+        flex-wrap: wrap-reverse;
+    }
+    .container_eq{
+        max-width: calc(620px - 26px);
+    }
+    .div_button_arrow{
+        max-width: calc(620px - 8px);
+        padding-right: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    :root{
+        --width_square_img: 220px;
+    }
+    figcaption{
+        font-size: 0.8em;
+    }
+    #team_div{
+        gap:4px;
+        justify-content: center;
+    }
+    .apre_grid{
+        flex-wrap: wrap-reverse;
+        align-items: flex-end;
+    }
+    .button_iniciar_game button{
+        margin: 26px;
+        padding: 8px 16px;
+        font-size: 1.4em;
+    }
+    .description h4{
+        font-size: 1.4em;
+        padding: 4px 0px;
+    }
+    .description p{
+        font-size: 1em;
+        padding: 8px 0px;
+    }
+    .fundo_background{
+        font-size: 1.2em;
+        gap: 12px;
+    }
+    .img_size{
+        width: 276px;
+    }
+    .section_initial{
+        grid-template-rows: 90px auto 80px;
+    }
+}

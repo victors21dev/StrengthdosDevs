@@ -1,0 +1,17 @@
+:root{
+    --heigth_padrao: 40px;
+    --border_padrao: 4px;
+}
+input{
+    height: var(--heigth_padrao);
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: var(--border_padrao);
+}
+button{
+    height: var(--heigth_padrao);
+    width: 78px;
+    border: 2px solid black;
+    border-radius: var(--border_padrao);
+    box-sizing: border-box;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html <%- include ('./partials/lang.ejs')%>>
+
+<head>
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
+</head>
+
+<body>
+    <main class="container">
+        <section class="section_initial">
+            <div class="fundo_background">
+                <i class="fa-solid fa-gamepad"></i>
+                <h1>Strength dos Devs</h1>
+            </div>
+            <div class="apre_grid">
+                <div class="margin_p description">
+                    <h4>Bem vindos ao nosso Projeto Integrador!</h4>
+                    <p>Tenha uma ótima partida! Aperta em start para iniciar</p>
+                    <div class="button_iniciar_game">
+                        <button>
+                            <div><i class="fa-solid fa-play"></i></div>
+                            <div>Start</div>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <figure class="margin_p figure_design">
+                        <img class="img_size" src="./images/lagom-guys-play-video-games-while-sitting-in-chair-bags.png"
+                            alt="gif">
+                        <figcaption>
+                            Illustration by <a target="_blank" href="https://icons8.com/illustrations/author/cj62pzCRUq1N">Julia
+                                Buzatti</a> from <a target="_blank" href="https://icons8.com/illustrations">Ouch!</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="div_button_arrow">
+                <div class="button_arrow">
+                    <p>
+                        Integrantes
+                    </p>
+                    <div class="circle">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container_eq">
+            <h4>Desenvolvido por:</h4>
+            <div id="team_div">
+                
+            </div>
+        </section>
+        <section class="config">
+            <div>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div>
+                Configurações para os membros
+            </div>
+
+        </section>
+    </main>
+    <script src="./scripts/team.js"></script>
+</body>
+
+</html>
