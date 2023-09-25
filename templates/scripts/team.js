@@ -1,16 +1,16 @@
 let team_div = document.querySelector("#team_div")
 let persons = [
-    format("Victor Santos", "../team/victor.jpeg", "santosvictor18", "victor-santos-da-silva-2753a6191", "victors21dev"),
+    format("Victor Santos", "../team/victor.jpeg", "santosvictor18", "victor-santos-da-silva-2753a6191", "victors21dev", "center"),
     format("Mirella Louise", "../team/mirella.jpg", "miih__3", "", ""),
-    format("Paulo Vinicio", "../team/paulo.jpg", "ashura_ink", "paulo-vin%C3%ADcio-a634a7168", ""),
-    format("Caio Porto Ramos", "../team/caio.jpg", "", "", "Tapioquito"),
-    format("Charlesson Bezerra", "../team/charlesson.jpg", "chaysociais", "", "SociologiaDev"),
-    format("Adrian", "../team/the-programmer.png", "", "", ""),
+    format("Paulo Vinicio", "../team/paulo.jpg", "ashura_ink", "paulo-vin%C3%ADcio-a634a7168", "", "center"),
+    format("Caio Porto Ramos", "../team/caio.jpg", "", "", "Tapioquito", "center"),
+    format("Charlesson Bezerra", "../team/charlesson.jpg", "chaysociais", "", "SociologiaDev", "center"),
+    format("Adrian", "../team/adrian.jpg", "_adrianpazz", "", "addrianADS", "calc(-100px)"),
 ]
 persons.forEach(element => {
     team_div.innerHTML += `
         <div class="square">
-            <div class="circle_img" style="background-image:URL(${element.url}); background-size: cover; background-position: center center">
+            <div class="circle_img" style="background-image:URL(${element.url}); background-size: cover; background-position: center ${element.position_img}">
                 
             </div>
             <div>
@@ -25,8 +25,8 @@ persons.forEach(element => {
     `
 })
 
-function format(n, u, inst, lin, gith){
-    return { nome: `${n}`, url: `${u}`, instagram: `${inst}`, LinkedIn: `${lin}`, github: `${gith}`}
+function format(n, u, inst, lin, gith, pos){
+    return { nome: `${n}`, url: `${u}`, instagram: `${inst}`, LinkedIn: `${lin}`, github: `${gith}`, position_img: `${pos}`}
 }
 function add(rede, elemento) {
     switch (rede) {

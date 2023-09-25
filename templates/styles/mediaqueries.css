@@ -32,7 +32,7 @@
         grid-template-rows: 240px auto 80px;
     }
 }
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1680px){
     figcaption{
         font-size: 1em;
     }
@@ -70,7 +70,7 @@
         width: 340px;
     }
     .section_initial{
-        grid-template-rows: 180px auto 80px;
+        grid-template-rows: 120px auto 80px;
     }
 }
 @media screen and (max-width:800px){
@@ -86,6 +86,9 @@
     .div_button_arrow{
         max-width: calc(620px - 8px);
         padding-right: 12px;
+    }
+    .section_initial{
+        grid-template-rows: 60px auto 80px;
     }
 }
 @media screen and (max-width: 500px){

@@ -98,7 +98,7 @@ main {
 
 .circle_img {
     width: var(--width_square_img);
-    height: var(--width_square_img);
+    height: calc(var(--width_square_img) + 80px);
     border-radius: 12px;
 }
 

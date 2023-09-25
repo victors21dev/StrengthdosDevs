@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html <%- include ('./partials/lang.ejs')%>>
+
+<head>
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
+</head>
+
+<body>
+    <h1>Aqui</h1>
+    
+    <script>
+        // ler dados
+        async function get() {
+            let nome = document.querySelector("#nome").value
+            const url = `http://localhost:3000/dados/`
+            const response = await fetch(url);
+            const responseJson = await response.json();
+            resultado.innerHTML = responseJson
+        }
+        get()
+    </script>
+</body>
+
+<html />

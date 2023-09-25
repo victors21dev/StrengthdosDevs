@@ -19,7 +19,8 @@ app.set("views", path.join(__dirname, "templates"));
 
 // Rotas
 app.get('/', linkRouter)
-app.get('/game',linkRouter)
+app.get('/dificuldade', linkRouter)
+app.get('/game', linkRouter)
 
 // API
 app.get('/name', callName)
