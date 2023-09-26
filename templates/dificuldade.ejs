@@ -7,11 +7,12 @@
             <%- include ('./partials/fontawesome.ejs')%>
 </head>
 
-<body>
+<body onload="get()">
     <h1>A</h1>
     <div id="resultado">
 
     </div>
+    
     <script defer>
         // ler dados
         async function get() {
@@ -23,7 +24,6 @@
                 resultado.innerHTML += `<li>${element.nivel}</li>`
             });
         }
-        get()
     </script>
 </body>
 
