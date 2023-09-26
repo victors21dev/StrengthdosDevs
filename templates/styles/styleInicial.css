@@ -1,28 +1,11 @@
-* {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth !important;
-}
-
 :root {
     --width_square_img: 240px;
-}
-
-a {
-    color: rgb(0, 36, 113);
-    text-decoration: none;
-}
-
-a:visited {
-    color: rgb(0, 36, 113);
-    text-decoration: none;
 }
 
 body {
     background-color: rgb(237, 238, 255);
     user-select: none;
 }
-
 figcaption {
     font-size: 1.12em;
     color: rgb(112, 112, 112);
@@ -83,19 +66,6 @@ main {
     justify-content: center;
 }
 
-.button_iniciar_game button {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 12px;
-    margin: 26px;
-    padding: 12px 20px;
-    color: #fff;
-    font-size: 1.2em;
-    background-color: #3f31ff;
-    border: 2px solid #3f31ff;
-    border-radius: 6px;
-}
-
 .circle_img {
     width: var(--width_square_img);
     height: calc(var(--width_square_img) + 80px);
@@ -107,16 +77,6 @@ main {
     justify-content: center;
     padding: 20px;
 }
-
-.container {
-    max-width: 1920px;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: -100%;
-    transform: translate(-50%, 100%);
-}
-
 .container_eq {
     position: relative;
     left: 50%;

@@ -10,8 +10,10 @@ const spawn = require("child_process").spawn;
 app.use(cors())
 
 // Use
+app.use('/', express.static(path.join(__dirname, "firebase")))
 app.use('/', express.static(path.join(__dirname, "templates")))
 app.use('/', express.static(path.join(__dirname, "public")))
+
 
 // Templates
 app.set("view engine", "ejs");
@@ -21,9 +23,11 @@ app.set("views", path.join(__dirname, "templates"));
 app.get('/', linkRouter)
 app.get('/dificuldade', linkRouter)
 app.get('/game', linkRouter)
+app.get('/config_dev', linkRouter)
 
 // API
 app.get('/name', callName)
+app.get('/dificuldades_game', linkRouter)
 
 // Functions
 function callName(req, res) {

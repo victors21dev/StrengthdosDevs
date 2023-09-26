@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html <%- include ('./partials/lang.ejs')%>>
+
+<head>
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
+    <link rel="stylesheet" href="./styles/login_register.css">
+</head>
+
+<body>
+    <main class="fundo_login_register">
+        <section class="login">
+            <div>
+                <div></div>
+                <div>
+                    <div><h1>Login</h1></div>
+                    <div>
+                        <input type="email">
+                        <input type="password">
+                        <input type="checkbox">
+                    </div>
+                    <div>
+                        <a href="">
+                            <p>Esqueceu a senha? Fale com o desenvolvedor clicando aqui</p>
+                        </a>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include ('./partials/firebase_scripts.ejs')%>
+</body>
+
+</html>

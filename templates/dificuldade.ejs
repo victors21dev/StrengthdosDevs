@@ -8,19 +8,22 @@
 </head>
 
 <body>
-    <h1>Aqui</h1>
-    
+    <h1>A</h1>
+    <div id="resultado">
+
+    </div>
     <script>
         // ler dados
         async function get() {
-            let nome = document.querySelector("#nome").value
-            const url = `http://localhost:3000/dados/`
+            let resultado = document.querySelector("#resultado")
+            const url = `http://localhost:4242/dificuldades_game`
             const response = await fetch(url);
             const responseJson = await response.json();
-            resultado.innerHTML = responseJson
+            let json = JSON.stringify(responseJson)
+            resultado.innerHTML = json
         }
         get()
     </script>
 </body>
 
-<html />
+</html >

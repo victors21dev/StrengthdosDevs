@@ -5,6 +5,7 @@
     <%- include ('./partials/head.ejs')%>
         <%- include ('./partials/title.ejs')%>
             <%- include ('./partials/fontawesome.ejs')%>
+    <link rel="stylesheet" href="./styles/styleInicial.css">
 </head>
 
 <body>
@@ -56,20 +57,28 @@
             </div>
         </section>
         <section class="config">
-            <div>
-                <i class="fa-solid fa-gear"></i>
-            </div>
-            <div>
-                Configurações para os membros
-            </div>
-
+            <button onclick="config()">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-gear"></i>
+                        Configurações para os membros
+                    </div>
+                </div>
+            </button>
         </section>
     </main>
     <script src="./scripts/team.js"></script>
     <script src="./scripts/inicial.js"></script>
     <script>
         function direcionar(){
-            window.location.href = "/dificuldade"
+            redirecionamento("dificuldade")
+        }
+        function config(){
+            redirecionamento("config_dev")
+        }
+
+        function redirecionamento(local){
+            window.location.href = `/${local}`
         }
     </script>
 </body>
