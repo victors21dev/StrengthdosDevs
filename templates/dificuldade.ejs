@@ -12,18 +12,19 @@
     <div id="resultado">
 
     </div>
-    <script>
+    <script defer>
         // ler dados
         async function get() {
             let resultado = document.querySelector("#resultado")
             const url = `http://localhost:4242/dificuldades_game`
             const response = await fetch(url);
             const responseJson = await response.json();
-            let json = JSON.stringify(responseJson)
-            resultado.innerHTML = json
+            responseJson.forEach(element => {
+                resultado.innerHTML += `<li>${element.nivel}</li>`
+            });
         }
         get()
     </script>
 </body>
 
-</html >
+</html>

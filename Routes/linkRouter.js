@@ -25,7 +25,7 @@ router.get('/config_dev', (req, res) => {
 router.get('/dificuldades_game', async (req, res) => {
     // Banco de dados
     let collection = await connectDataBase("Niveis")
-    res.json(collection)
+    res.send(collection)
 })
 
 
