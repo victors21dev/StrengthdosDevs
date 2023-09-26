@@ -1,6 +1,6 @@
 @media screen and (max-width: 1980px){
     figcaption{
-        font-size: 1.2em;
+        font-size: 2em;
     }
     .button_iniciar_game button{
         margin: 26px;
@@ -8,7 +8,7 @@
         font-size: 1.6em;
     }
     .container_eq{
-        max-width: calc(1190px - 26px);
+        max-width: calc(1980px - 26px);
     }
     .description h4{
         font-size: 2em;
@@ -19,7 +19,8 @@
         padding: 8px 0px;
     }
     .div_button_arrow{
-        max-width: calc(1190px - 8px);
+        max-width: calc(1980px - 8px);
+        margin-right: 16px;
     }
     .fundo_background{
         font-size: 2.4em;
@@ -32,16 +33,20 @@
         grid-template-rows: 240px auto 80px;
     }
 }
-@media screen and (max-width: 1680px){
+@media screen and (max-width: 1600px){
     figcaption{
         font-size: 1em;
+    }
+    #team_div {
+        gap: 80px;
+        margin: 32px;
     }
     .apre_grid{
         flex-wrap: nowrap;
         padding: 4px;
     }
     .button_arrow{
-        max-width: calc(1065px - 8px);
+        max-width: calc(1600px - 8px);
     }
     .button_iniciar_game button{
         margin: 18px;
@@ -49,10 +54,10 @@
         font-size: 1.6em;
     }
     .container_eq{
-        max-width: calc(1010px - 26px);
+        max-width: calc(1600px - 26px);
     }
     .description h4{
-        font-size: 1.6em;
+        font-size: 1.8em;
         padding: 4px 0px;
     }
     .description p{
@@ -60,14 +65,14 @@
         padding: 8px 0px;
     }
     .div_button_arrow{
-        max-width: calc(1010px - 8px);
+        max-width: calc(1600px - 8px);
     }
     .fundo_background{
         font-size: 1.8em;
         gap: 18px;
     }
     .img_size{
-        width: 340px;
+        width: 100%;
     }
     .section_initial{
         grid-template-rows: 120px auto 80px;
@@ -77,14 +82,18 @@
     :root{
         --width_square_img: 200px;
     }
+    #team_div {
+        gap: 12px;
+        margin: 16px;
+    }
     .apre_grid{
         flex-wrap: wrap-reverse;
     }
     .container_eq{
-        max-width: calc(620px - 26px);
+        max-width: calc(800px - 26px);
     }
     .div_button_arrow{
-        max-width: calc(620px - 8px);
+        max-width: calc(800px - 8px);
         padding-right: 12px;
     }
     .section_initial{

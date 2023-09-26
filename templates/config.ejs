@@ -2,17 +2,19 @@
 <html <%- include ('./partials/lang.ejs')%>>
 
 <head>
+    <link rel="stylesheet" href="./styles/login_register.css">
     <%- include ('./partials/head.ejs')%>
         <%- include ('./partials/title.ejs')%>
             <%- include ('./partials/fontawesome.ejs')%>
-    <link rel="stylesheet" href="./styles/login_register.css">
 </head>
 
 <body>
     <main class="fundo_login_register">
         <section class="login">
-            <div>
-                <div></div>
+            <div class="design_login">
+                <div>
+                    voltar < -
+                </div>
                 <div>
                     <div><h1>Login</h1></div>
                     <div>
@@ -21,11 +23,15 @@
                         <input type="checkbox">
                     </div>
                     <div>
-                        <a href="">
+                        <a target="_blank" href="https://wa.me/5582991763470">
                             <p>Esqueceu a senha? Fale com o desenvolvedor clicando aqui</p>
                         </a>
                     </div>
-                    <div></div>
+                    <div>
+                        <button>
+                            Login
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

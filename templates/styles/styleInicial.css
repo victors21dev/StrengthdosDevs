@@ -141,6 +141,10 @@ main {
     display: grid;
     grid-template-rows: 220px auto 60px;
     align-items: center;
+    background-image: linear-gradient(rgb(237, 238, 255),rgba(237, 238, 255, 0.464)), url("../images/winter-260817_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .square {

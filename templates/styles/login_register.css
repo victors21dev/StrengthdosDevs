@@ -6,12 +6,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.design_login{
+    background-color: aliceblue;
+    border-radius: 4px;
+    padding: 12px;
+    height: fit-content;
+    position: relative;
+    top: -100px;
+    display: grid;
+    gap: 32px;
 }
 .login{
-    width: 700px;
-    background-color: aliceblue;
-    position: relative;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -40%);
+    display: flex;
+    justify-self: center;
 }
