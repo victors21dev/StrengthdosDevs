@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html <%- include ('./partials/lang.ejs')%>>
+
+<head>
+    <link rel="stylesheet" href="./styles/login_register.css">
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
+</head>
+
+<body>
+    <main class="fundo_login_register">
+        <section class="login">
+            <div class="design_login">
+                <div onclick="direcionar()" style="cursor: pointer;">
+                    <div>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div>
+                        voltar
+                    </div>
+                </div>
+                <div>
+                    <h1>Login</h1>
+                </div>
+                <div class="div_login">
+                    <div class="input_login">
+                        <span>Email</span>
+                        <input id="email" type="email">
+                        <span>Senha</span>
+                        <input id="password" type="password">
+                    </div>
+                    <div>
+                        <span>Lembrar-me</span><input id="checkbox_remember" type="checkbox">
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://wa.me/5582991763470">
+                            <p>Esqueceu a senha? Fale com o desenvolvedor clicando aqui</p>
+                        </a>
+                    </div>
+                    <div class="button_login">
+                        <button>
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="msgbox">
+        
+    </div>
+    <script src="./scripts/msgbox.js"></script>
+    <!-- <%- include ('./partials/firebase_scripts.ejs')%> -->
+    <script>
+        function direcionar(){
+            redirecionamento("")
+        }
+
+        function redirecionamento(local){
+            window.location.href = `/${local}`
+        }
+    </script>
+</body>
+
+</html>

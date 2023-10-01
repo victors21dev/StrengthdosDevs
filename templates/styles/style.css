@@ -23,9 +23,12 @@ button{
     background-color: #3f31ff;
     border: 2px solid #3f31ff;
     border-radius: 6px;
+    transition: 500ms;
 }
 button:hover{
     cursor: pointer;
+    background-color: #021b7d;
+    transition: 500ms;
 }
 .container {
     max-width: 1920px;
@@ -34,4 +37,71 @@ button:hover{
     left: 50%;
     top: -100%;
     transform: translate(-50%, 100%);
+}
+
+/* msg */
+.msgbox{
+    width: 340px;
+    /* height: 110px; */
+    position: fixed;
+    right: calc(0px + 12px);
+    z-index: 2000;
+    display: grid;
+    grid-template-rows: 20px auto 20px;
+    animation: msganimation 6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    border-radius: 4px;
+    padding: 4px;
+}
+.msgbox-close{
+    display: flex;
+    justify-content: end;
+    padding: 6px;
+}
+.msgbox-grid-text{
+    display: grid;
+    grid-template-columns: 26px auto;
+    align-items: center;
+    padding: 12px;
+}
+.title-description{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+/*  */
+@keyframes msganimation {
+    0%{bottom: -200px; display: none;}
+    10%{bottom: calc(0px + 12px); display: block;}
+    90%{bottom: calc(0px + 12px); display: block;}
+    100%{bottom: -200px; display: none;}
+}
+@keyframes progress {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+.progress-bar{
+    height: 100%;
+    animation: progress 4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-delay: 500ms;
+    background-color: #ffffff93;
+    border-radius: 2px;
+}
+.success{
+    background-color: #12ec7f;
+    color: #fff;
+}
+.erro{
+    background-color: #fd4242;
+    color: #fff;
+}
+.info{
+    background-color: #318aff;
+    color: #fff;
+}
+.warning{
+    background-color: #f5ff40;
+    color: #111111;
 }

@@ -1,14 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <%- include ('./partials/lang.ejs')%>>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link rel="stylesheet" href="./styles/game.css">
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
 </head>
 
 <body>
-    <h1>Game</h1>
+    <main class="inteface">
+        <div class="game">
+            <section class="menu">
+                <div style="text-align: start;"><h2>Tentavivas restantes: <span>8</span></h2></div>
+                <div style="text-align: center;">Letras jogadas: <span>L,K,N</span></div>
+                <div style="text-align: end;">Encerrar game</div>
+            </section>
+            <section class="forca_letras">
+                <div class="template_forca">
+                    <div class="item8" style="text-align: start; position: relative; left: -10px;">__</div>
+                    <div class="item1" style="text-align: center;">|</div>
+                    <div class="item2" style="text-align: center;">😶</div>
+                    <div class="item4" style="text-align: center;">|</div>
+                    <div class="item3" style="text-align: center;">/</div>
+                    <div class="item5" style="text-align: center;">\</div>
+                    <div class="item6" style="text-align: center;">/</div>
+                    <div class="item7" style="text-align: center;">\</div>
+                </div>
+                <div>
+                    <div class="letras_div">
+                        <div class="square_letras">G</div>
+                        <div class="square_letras">A</div>
+                        <div class="square_letras">T</div>
+                        <div class="square_letras">O</div>
+                    </div>
+                    <div>
+                        Dica: Animal filha da p.
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <div id="letrasRow1" class="letrasRow"></div>
+                    <div id="letrasRow2" class="letrasRow"></div>
+                    <div id="letrasRow3" class="letrasRow"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script defer src="./scripts/letras_game.js"></script>
+    <script defer src="./scripts/evento_letras.js"></script>
 </body>
 
 </html>

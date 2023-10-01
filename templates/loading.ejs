@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html <%- include ('./partials/lang.ejs')%>>
+
+<head>
+    <link rel="stylesheet" href="./styles/loading.css">
+    <%- include ('./partials/head.ejs')%>
+        <%- include ('./partials/title.ejs')%>
+            <%- include ('./partials/fontawesome.ejs')%>
+</head>
+
+<body>
+    <h1>Loading...</h1>
+    <%- include ('./partials/firebase_scripts.ejs')%>
+        <script defer src="./state_changed.js"></script>
+        <script defer>
+            async function get() {
+                var urlAtual = window.location.href;
+                var urlClass = new URL(urlAtual);
+                var loc = urlClass.searchParams.get("location");
+                if (loc == "login") {
+                    resultado = await state_changed.verificar_logado()
+                    console.log(resultado)
+                    if (resultado == true) {
+                        red("config")
+                    } else {
+                        red(loc)
+                    }
+                }
+                else {
+                    red(loc)
+                }
+            }
+            function red(value) {
+                setTimeout(() => {
+                    window.location.href = `/${value}`
+                },1000)
+            }
+        </script>
+</body>
+
+</html>

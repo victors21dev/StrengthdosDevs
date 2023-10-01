@@ -17,7 +17,13 @@ router.get('/dificuldade', async (req, res) => {
 router.get('/game', (req, res) => {
     res.render('game')
 })
-router.get('/config_dev', (req, res) => {
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+router.get('/state', (req, res) => {
+    res.render('loading')
+})
+router.get('/config', (req, res) => {
     res.render('config')
 })
 

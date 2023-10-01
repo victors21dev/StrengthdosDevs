@@ -4,6 +4,7 @@ const app = express()
 const path = require('path')
 const linkRouter = require("./Routes/linkRouter")
 const cors = require("cors")
+// const { link } = require('fs')
 const spawn = require("child_process").spawn;
 
 // Cors
@@ -23,7 +24,9 @@ app.set("views", path.join(__dirname, "templates"));
 app.get('/', linkRouter)
 app.get('/dificuldade', linkRouter)
 app.get('/game', linkRouter)
-app.get('/config_dev', linkRouter)
+app.get('/login', linkRouter)
+// app.get('/state', linkRouter)
+// app.get('/config', linkRouter)
 
 // API
 app.get('/name', callName)

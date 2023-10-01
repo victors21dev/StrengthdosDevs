@@ -1,3 +1,21 @@
+.button_login{
+    display: flex;
+    justify-content: center;
+}
+.design_login{
+    background-color: aliceblue;
+    border-radius: 4px;
+    padding: 12px;
+    height: fit-content;
+    position: relative;
+    top: -40px;
+    display: grid;
+    gap: 32px;
+}
+.div_login{
+    display: grid;
+    gap: 8px;
+}
 .fundo_login_register{
     width: 100%;
     height: 100%;
@@ -10,15 +28,15 @@
     justify-content: center;
     align-items: center;
 }
-.design_login{
-    background-color: aliceblue;
-    border-radius: 4px;
-    padding: 12px;
-    height: fit-content;
-    position: relative;
-    top: -100px;
+.input_login{
     display: grid;
-    gap: 32px;
+}
+.input_login input{
+    height: 40px;
+    border: none;
+    margin: 4px 0px;
+    background-color: #cadbff;
+    padding-left: 12px;
 }
 .login{
     display: flex;

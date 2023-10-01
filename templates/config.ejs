@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html <%- include ('./partials/lang.ejs')%>>
+<h1>Aaaa</h1>
+<button onclick="logOut()">
+    sair
+</button>
+<%- include ('./partials/firebase_scripts.ejs')%>
+<script defer>
+    function logOut(){
+        auth.signOut()
+        .then(() => {
+            // Sign-out successful.
+            setTimeout(() => {
+                window.location.href = "/login"
+            }, 1000)
+        }).catch((error) => {
+            // An error happened.
+        })
+    }
 
-<head>
-    <link rel="stylesheet" href="./styles/login_register.css">
-    <%- include ('./partials/head.ejs')%>
-        <%- include ('./partials/title.ejs')%>
-            <%- include ('./partials/fontawesome.ejs')%>
-</head>
-
-<body>
-    <main class="fundo_login_register">
-        <section class="login">
-            <div class="design_login">
-                <div>
-                    voltar < -
-                </div>
-                <div>
-                    <div><h1>Login</h1></div>
-                    <div>
-                        <input type="email">
-                        <input type="password">
-                        <input type="checkbox">
-                    </div>
-                    <div>
-                        <a target="_blank" href="https://wa.me/5582991763470">
-                            <p>Esqueceu a senha? Fale com o desenvolvedor clicando aqui</p>
-                        </a>
-                    </div>
-                    <div>
-                        <button>
-                            Login
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <%- include ('./partials/firebase_scripts.ejs')%>
-</body>
-
-</html>
+</script>
