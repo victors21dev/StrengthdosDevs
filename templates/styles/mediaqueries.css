@@ -86,18 +86,44 @@
         gap: 12px;
         margin: 16px;
     }
+    button{
+        margin: 2px;
+    }
     .apre_grid{
         flex-wrap: wrap-reverse;
     }
+    .card_dificuldade{
+        display: grid;
+        justify-content: center;
+    }
     .container_eq{
         max-width: calc(800px - 26px);
+    }
+    .content{
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+        height: 100%;
+        
     }
     .div_button_arrow{
         max-width: calc(800px - 8px);
         padding-right: 12px;
     }
+    .img_nivel{
+        height: 140px;
+    }
     .section_initial{
         grid-template-rows: 60px auto 80px;
+    }
+    .list_dif{
+        display: grid;
+        width: 100%;
+        padding: 2px;
+        gap: 6px;
+        grid-template-rows: auto auto auto;
+        box-sizing: border-box;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 500px){

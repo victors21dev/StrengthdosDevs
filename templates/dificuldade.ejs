@@ -2,12 +2,11 @@
 <html <%- include ('./partials/lang.ejs')%>>
 
 <head>
-
+    <link rel="stylesheet" href="./styles/loading.css">
+    <link rel="stylesheet" href="./styles/dificuldade.css">
     <%- include ('./partials/head.ejs')%>
         <%- include ('./partials/title.ejs')%>
             <%- include ('./partials/fontawesome.ejs')%>
-                <link rel="stylesheet" href="./styles/loading.css">
-                <link rel="stylesheet" href="./styles/dificuldade.css">
 </head>
 
 <body onload="get()">
@@ -21,7 +20,7 @@
         <main class="content">
             <h1><span><i class="fa-solid fa-code"></i></span> Escolha um nível</h1>
             <div id="resultado" class="list_dif">
-                
+
             </div>
         </main>
     </div>
@@ -39,7 +38,7 @@
 
                 let imgSrc = element.id_nivel
                 resultado.innerHTML += `
-                <div>
+                <div class="card_dificuldade">
                     <div>
                         <img id_img="${element.id_nivel}" class="img_nivel" src="${images[imgSrc - 1]}">
                     </div>
