@@ -1,4 +1,32 @@
-.inteface{
+.disable {
+    list-style-type: none;
+    width: 32px;
+    height: 32px;
+    color: #999999;
+    border-radius: 2px;
+    background-color: rgb(179, 179, 179);
+    padding: 16px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_gameover{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.div_palavra{
+    display: grid;
+    width: 700px;
+    justify-content: center;
+    text-align: start;
+}
+.inteface {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -6,29 +34,43 @@
     padding: 8px;
     box-sizing: border-box;
 }
-.game{
+
+.game {
     height: 100%;
     display: grid;
     grid-template-rows: 40px auto 200px;
     align-items: center;
 }
-.forca_letras{
+.gameOver{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffef;
+    position: absolute;
+    z-index: 4;
+    display: none;
+}
+.forca_letras {
     display: flex;
     justify-content: center;
     gap: 32px;
+    flex-wrap: wrap;
 }
-.letras_div{
+
+.letras_div {
     display: flex;
     gap: 4px;
     font-size: 2.6em;
+    justify-content: center;
 }
-.letrasRow{
+
+.letrasRow {
     display: flex;
     gap: 4px;
     margin: 4px;
     justify-content: center;
 }
-.letrasRow li{
+
+.letras_design {
     list-style-type: none;
     width: 32px;
     height: 32px;
@@ -41,7 +83,8 @@
     justify-content: center;
     align-items: center;
 }
-.letrasRow li:hover{
+
+.letras_design:hover {
     background-color: rgb(2, 176, 150);
     cursor: pointer;
     transition: 500ms;
@@ -49,63 +92,73 @@
     z-index: 4;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.584);
 }
-.menu{
+
+.menu {
     display: grid;
-    grid-template-columns: 20% 40% 20%;
+    grid-template-columns: auto auto;
     justify-content: space-between;
     background-color: #fff;
     align-items: center;
     padding: 6px;
 }
-.square_letras{
+
+.square_letras {
     background-color: rgb(255, 255, 255);
-    height: 230px;
-    width: 120px;
+    width: 80px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* FORCA */
-.template_forca{
+.template_forca {
     font-size: 32px;
     display: grid;
     height: fit-content;
     grid-template-areas: "a8 a8 a8"
-                         "a1 a1 a1"
-                         "a2 a2 a2"
-                         "a3 a4 a5"
-                         "a6 vazio a7";
+        "a1 a1 a1"
+        "a2 a2 a2"
+        "a3 a4 a5"
+        "a6 vazio a7";
 }
-.item8{
+
+.item8 {
     grid-area: a8;
-    display: block;
+    display: none;
 }
-.item1{
+
+.item1 {
     grid-area: a1;
-    display: block;
+    display: none;
 }
-.item2{
+
+.item2 {
     grid-area: a2;
-    display: block;
+    display: none;
 }
-.item3{
+
+.item3 {
     grid-area: a3;
-    display: block;
+    display: none;
 }
-.item4{
+
+.item4 {
     grid-area: a4;
-    display: block;
+    display: none;
 }
-.item5{
+
+.item5 {
     grid-area: a5;
-    display: block;
+    display: none;
 }
-.item6{
+
+.item6 {
     grid-area: a6;
-    display: block;
+    display: none;
 }
-.item7{
+
+.item7 {
     grid-area: a7;
-    display: block;
+    display: none;
 }

@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <link rel="stylesheet" href="./styles/loading.css"></link>
     <link rel="stylesheet" href="./styles/game.css">
     <%- include ('./partials/head.ejs')%>
         <%- include ('./partials/title.ejs')%>
             <%- include ('./partials/fontawesome.ejs')%>
 </head>
 
-<body>
+<body onload="get()">
+    <div id="tela_gameOver" class="gameOver">
+        <div class="div_gameover">
+            <div id="mensagem">
+                <h1>Fim de jogo!</h1>
+            </div>
+            <button onclick="inicio()"><i class="fa-solid fa-house"></i>Finalizar</button>
+        </div>
+    </div>
+    <div class="loading_div" style="display: block;">
+        <div class="load">
+            <i class="fa-solid fa-spinner"></i>
+            <h4>Loading...</h4>
+        </div>
+    </div>
     <main class="inteface">
         <div class="game">
             <section class="menu">
-                <div style="text-align: start;"><h2>Tentavivas restantes: <span>8</span></h2></div>
-                <div style="text-align: center;">Letras jogadas: <span>L,K,N</span></div>
+                <div style="text-align: start;"><h2>Tentavivas restantes: <span id="tentativas"></span></h2></div>
                 <div style="text-align: end;">Encerrar game</div>
             </section>
             <section class="forca_letras">
@@ -30,15 +44,11 @@
                     <div class="item6" style="text-align: center;">/</div>
                     <div class="item7" style="text-align: center;">\</div>
                 </div>
-                <div>
+                <div class="div_palavra" style="text-align: center;">
                     <div class="letras_div">
-                        <div class="square_letras">G</div>
-                        <div class="square_letras">A</div>
-                        <div class="square_letras">T</div>
-                        <div class="square_letras">O</div>
                     </div>
-                    <div>
-                        Dica: Animal filha da p.
+                    <div style="max-width: fit-content;">
+                        Dica: <span id="dica"></span>.
                     </div>
                 </div>
             </section>
@@ -52,7 +62,13 @@
         </div>
     </main>
     <script defer src="./scripts/letras_game.js"></script>
+    <script defer src="./scripts/game.js"></script>
     <script defer src="./scripts/evento_letras.js"></script>
+    <script>
+        function inicio(){
+            window.location.href = `/`
+        }
+    </script>
 </body>
 
 </html>

@@ -11,22 +11,25 @@ matriz.forEach(matriz => {
     if (matriz[0].m1 == undefined) {
         if (matriz[0].m2 == undefined) {
             matriz.forEach(element => {
-                element.m3.forEach(letra=>{
-                    lr3.innerHTML += `<li class="letras_design">${letra}</li>`
+                element.m3.forEach(letra => {
+                    lr3.innerHTML += format_letra(letra)
                 })
             })
         } else {
             matriz.forEach(element => {
-                element.m2.forEach(letra=>{
-                    lr2.innerHTML += `<li class="letras_design">${letra}</li>`
+                element.m2.forEach(letra => {
+                    lr2.innerHTML += format_letra(letra)
                 })
             })
         }
     } else {
         matriz.forEach(element => {
-            element.m1.forEach(letra=>{
-                    lr1.innerHTML += `<li class="letras_design">${letra}</li>`
-                })
+            element.m1.forEach(letra => {
+                lr1.innerHTML += format_letra(letra)
+            })
         })
     }
 })
+function format_letra(letra) {
+    return `<li id="${letra}" class="letras_design" onclick='letra_clicada(this)'>${letra}</li>`
+}

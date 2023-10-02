@@ -33,6 +33,11 @@ router.get('/dificuldades_game', async (req, res) => {
     let collection = await connectDataBase("Niveis")
     res.send(collection)
 })
+router.get('/palavras_banco', async (req, res) => {
+    // Banco de dados
+    let collection = await connectDataBase("Words")
+    res.send(collection)
+})
 
 
 module.exports = router

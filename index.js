@@ -31,12 +31,21 @@ app.get('/login', linkRouter)
 // API
 app.get('/name', callName)
 app.get('/dificuldades_game', linkRouter)
+app.get('/palavras_banco', linkRouter)
+app.get('/python_sortear', sortear_py)
 
-// Functions
+// Functions python
 function callName(req, res) {
     var process = spawn('python', ["./python/hello.py",
         req.query.firsname,
         req.query.lastname]);
+    process.stdout.on('data', function (data) {
+        res.send(data.toString());
+    })
+}
+function sortear_py(req, res) {
+    var process = spawn('python', ["./python/sortear_palavra.py",
+        req.query.palavras]);
     process.stdout.on('data', function (data) {
         res.send(data.toString());
     })
