@@ -162,7 +162,6 @@ function mostrar_forca(){
     cont_forca = cont_forca+1
 }
 function pegar_dica(lista, palavra){
-    console.log(lista, palavra)
     for(let i = 0; i<lista.length; i++){
         if(lista[i].palavra == palavra){
             dica_div.innerHTML = lista[i].dica
