@@ -11,7 +11,6 @@ const spawn = require("child_process").spawn;
 app.use(cors())
 
 // Use
-app.use('/', express.static(path.join(__dirname, "firebase")))
 app.use('/', express.static(path.join(__dirname, "templates")))
 app.use('/', express.static(path.join(__dirname, "public")))
 
@@ -29,20 +28,11 @@ app.get('/login', linkRouter)
 // app.get('/config', linkRouter)
 
 // API
-app.get('/name', callName)
 app.get('/dificuldades_game', linkRouter)
 app.get('/palavras_banco', linkRouter)
 app.get('/python_sortear', sortear_py)
 
 // Functions python
-function callName(req, res) {
-    var process = spawn('python', ["./python/hello.py",
-        req.query.firsname,
-        req.query.lastname]);
-    process.stdout.on('data', function (data) {
-        res.send(data.toString());
-    })
-}
 function sortear_py(req, res) {
     var process = spawn('python', ["./python/sortear_palavra.py",
         req.query.palavras]);

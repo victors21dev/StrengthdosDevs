@@ -14,7 +14,6 @@ async def formatacao(number, string):
 
     # Contador de letras
     cont = 0
-
     # loop de acordo com letras
     for caractere in string:
         # Recebe ele + ele mesmo
