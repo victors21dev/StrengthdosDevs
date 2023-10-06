@@ -24,8 +24,6 @@ app.get('/', linkRouter)
 app.get('/dificuldade', linkRouter)
 app.get('/game', linkRouter)
 app.get('/login', linkRouter)
-// app.get('/state', linkRouter)
-// app.get('/config', linkRouter)
 
 // API
 app.get('/dificuldades_game', linkRouter)
