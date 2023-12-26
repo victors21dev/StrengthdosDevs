@@ -11,7 +11,7 @@ Jogo criado para projeto integrador da graduação (ADS) pelo Centro de Estudos 
 - MongoDB Atlas;
 - Python;
 - Vercel.
-- 
+
 ## Explicando um pouco de cada interface
 Tela inicial
 - Todo o fluxo é gerenciado por rotas.
