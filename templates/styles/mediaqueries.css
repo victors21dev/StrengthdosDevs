@@ -75,7 +75,7 @@
         width: 100%;
     }
     .section_initial{
-        grid-template-rows: 120px auto 80px;
+        grid-template-rows: 80px auto 80px;
     }
 }
 @media screen and (max-width:800px){
