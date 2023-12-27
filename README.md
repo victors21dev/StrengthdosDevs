@@ -1,3 +1,6 @@
+### Em desenvolvimento : )
+- Pode ser encontrado bugs, por favor avisar em minhas redes sociais localizada no meu perfil.
+<hr>
 
 ## Jogo da Forca
 
