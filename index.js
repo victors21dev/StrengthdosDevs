@@ -13,6 +13,7 @@ app.use(cors())
 // Use
 app.use('/', express.static(path.join(__dirname, "templates")))
 app.use('/', express.static(path.join(__dirname, "public")))
+app.use('/', express.static(path.join(__dirname, "python")))
 
 
 // Templates
@@ -31,8 +32,8 @@ app.get('/palavras_banco', linkRouter)
 app.get('/python_sortear', sortear_py)
 
 // Functions python
-function sortear_py(req, res) {
-    var process = spawn('python', ["./python/sortear_palavra.py",
+async function sortear_py(req, res) {
+    var process = await spawn('python', ["./python/sortear_palavra.py",
         req.query.palavras]);
     process.stdout.on('data', function (data) {
         res.send(data.toString());
