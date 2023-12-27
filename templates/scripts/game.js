@@ -52,7 +52,14 @@ async function banco_get(nivel_id) {
 // Sortear palavra no python
 async function sorteamento_palavra_python(palavras_para_python) {
     const url = `/python_sortear?palavras=${palavras_para_python}`
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
     console.log(response)
     const responseJson = await response.json();
     return responseJson
